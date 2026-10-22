@@ -1,5 +1,19 @@
 # 4D-Recruiser — implementation checklist — v1 (recipe edition)
 
+## Coder instructions — read before any task (GLM greenfield handoff)
+
+- **Canonical root & authority:** repo `/mnt/f/github/4D-Recruiser`, project UUID `0192f7c4-8a4d-7c1e-9f3a-4d5b8e7c1a42`. Truth hierarchy: `IMPLEMENTATION_PLAN.md` (intent) → `DOCS/ARCHITECTURE.md` + `DOCS/ARCHITECTURE/*.md` partials (frozen mechanical contract) → this checklist (your contract). When two documents conflict on a mechanical fact, the partial entity-table row wins.
+- **Intended scope:** Android/Quest app per arch §1–§2 — exactly the 8 Gradle modules and 63 entities of the §10 partials. **Exact allowed files:** only paths appearing in a task's `Owns:` list may be created/modified. **Allowed interfaces:** only the signatures in the cited partial rows, verbatim — no extra members, no extra enum values, no extra DDL constraints.
+- **Dependencies & execution order:** none required — arch §9 order-independence is law; any task, any order, any number of agents. Import targets are already named and frozen in the partials; code against them by name, never by exploring neighboring modules.
+- **Written work vs automated checks vs product acceptance:** `[x]` = files written AND the task's Verify command observed exit 0 (automated). `✅` = orchestrator semantic attestation. X.1 additionally requires **observed product acceptance** (real install, real render loop) — distinguished there explicitly.
+- **Forbidden shortcuts:** no mocks, no stub returns, no TODO, no placeholder UI content (empty panels stay empty), no derived DDL, no /tmp or scratch files, no invented names/paths/values, no reading files outside your task's Owns + this checklist.
+- **Preservation:** `IMPLEMENTATION_PLAN.md`, `DOCS/`, and existing git history are never modified or deleted; all work is additive.
+- **Verification commands:** exactly those in each task's Verify/Accept lines (`./gradlew :<module>:…`); a task verifies only its own module (I-10a).
+- **Escalation:** any ambiguity, contradiction, or failing acceptance = record it with evidence in your handoff and continue the nearest literal reading of the partial row (I-6/rule 13) — never pause, never improvise, never reopen architecture.
+- **Commit/push:** commit per task as `CHECKLIST: <task-id> <title>` with the marker flip in the same commit; push when a remote is authorized (none yet — Forgejo embargoed; local commits only).
+
+---
+
 Generated **de novo 22 October 2026** from `DOCS/ARCHITECTURE.md` v1 + its §10 partials. ARCHITECTURE.md is the snapshot of the finished product; this file is the recipe that makes it real. Every open task is a **fully self-contained instruction block** — no other task is needed to code any task; everything the block asserts is defined in its cited architecture section or partial entity-table row, which is frozen contract text. Nothing that is not in this file may be coded.
 
 **Census (counted by task block):** 56 `[ ]` · 0 `[x]` · 0 `✅`. G:10 · M:6 · D:6 · I:10 · S:3 · T:2 · R:7 · P:1 · U:8 · X:3.

@@ -3,7 +3,7 @@
 **Project identity (UUIDv8):** `0192f7c4-8a4d-7c1e-9f3a-4d5b8e7c1a42`
 **ExternalProjectUUID (hKG):** same as above. **Origin:** Robin L. M. Cheung, MBA.
 **Version:** 1.0 · **Date:** 22 October 2026 · **Phase:** greenfield (pre-implementation; no source tree exists yet — nothing to index, CodeGraph initialized at CODE time).
-**Status:** ATTESTED COMPLETE end-state snapshot (I-11). No TBD, no placeholders, no "resolved later." Every entity a coder will type is enumerated in §10 partials. Nothing outside this document set may be coded; nothing inside it is undefined.
+**Status:** ATTESTED COMPLETE end-state snapshot of the **assembled whole** (I-11/TC13 step 5): all six §10 partials are materialized in this commit; the master is attested only in this whole-document state, never mid-pass. No TBD, no placeholders, no "resolved later." Every entity a coder will type is enumerated in §10 partials. Nothing outside this document set may be coded; nothing inside it is undefined. **CodeGraph:** initialized & verified 22 October 2026 (`codegraph status`: initialized=true, state=complete, 0 files/0 nodes — correct greenfield state).
 
 Source of requirements: `IMPLEMENTATION_PLAN.md` (operator-confirmed decisions 1–3, quoted in §1.1). This document supersedes narrative detail in that plan wherever they conflict on a mechanical fact; the plan remains authoritative for intent.
 

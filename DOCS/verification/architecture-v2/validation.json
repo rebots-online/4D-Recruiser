@@ -1,0 +1,12 @@
+{
+  "master": "DOCS/ARCHITECTURE.md",
+  "sha256": "e6d83fe33e5c68643ed4d44259431576777e94f0e368739a0a26bc7fc2017499",
+  "entityGroups": 87,
+  "modules": 14,
+  "lines": 489,
+  "tablePlantUmlMermaidParity": "PASS",
+  "balancedFences": "PASS",
+  "ownerAndDecisionReferences": "PASS",
+  "productRuntime": "NOT RUN",
+  "architectureExit": "NOT ATTESTED: TC12 UI source export and clearance absent"
+}

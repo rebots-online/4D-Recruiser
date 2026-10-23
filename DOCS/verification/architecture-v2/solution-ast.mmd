@@ -1,0 +1,144 @@
+flowchart LR
+ROOT["4D-Recruiser solution AST"]
+subgraph C01["C01 owned declarations"]
+E001["E001 Result&lt;T&gt;, aliases"]
+E002["E002 MediaKind, Projection, Origin, ModelKind"]
+E003["E003 Backend, Profile, PoseMethod, DepthMethod, BridgeKind"]
+E004["E004 JobStage, Tab, Playback, XrState"]
+E005["E005 ErrorCode, AppError"]
+E006["E006 Pose, Camera, GeoAnchor"]
+E007["E007 Metadata"]
+E008["E008 Intrinsics, Lighting"]
+E009["E009 SourceAsset, Frame"]
+E010["E010 Feature, Match, PoseProposal"]
+E011["E011 DepthMap, Observation"]
+E012["E012 SplatPage"]
+E013["E013 FrameRef, Loop, Track"]
+E014["E014 Vignette"]
+E015["E015 WorldSettings"]
+E016["E016 Scaffold, BridgeLink, BridgeSet"]
+E017["E017 Viewpoint, World"]
+E018["E018 Job, JobEvent, JobOutput"]
+E019["E019 Capabilities, RenderStats"]
+E020["E020 UiState, WorldSummary"]
+E021["E021 Command"]
+E022["E022 Action"]
+E023["E023 PickedAsset, AssetReader, Disposer, CancelToken"]
+E024["E024 StoragePort"]
+E025["E025 MediaPort"]
+E026["E026 RendererPort, ClockPort"]
+E027["E027 GeometryPort"]
+E028["E028 JobPort, PlatformPort"]
+E029["E029 DEFAULTS, PROFILE_BUDGETS, PALETTE"]
+E030["E030 Resource, Dependency, Producer"]
+E031["E031 Manifest"]
+end
+ROOT --> C01
+subgraph G01["G01 owned declarations"]
+E032["E032 poseMatrix, applyPose, rotateNormal, interpolatePose"]
+E033["E033 srgbToLinear, linearToSrgb, normalize3, seededRandom"]
+E034["E034 inferIntrinsics, exifPose"]
+E035["E035 detectFeatures, matchFeatures"]
+E036["E036 solveRelativePose, triangulate"]
+E037["E037 estimateDepth"]
+E038["E038 liftFrame"]
+E039["E039 createGeometry"]
+end
+ROOT --> G01
+subgraph I01["I01 owned declarations"]
+E040["E040 readImageMetadata, estimateLighting"]
+E041["E041 decodeFrames"]
+E042["E042 trackFrames"]
+E043["E043 ingestVignette"]
+end
+ROOT --> I01
+subgraph S01["S01 owned declarations"]
+E044["E044 harmonize, fitSH"]
+E045["E045 scaffoldSurfaces, Surface"]
+E046["E046 selectBridgeLinks, sampleBridge"]
+E047["E047 stitchWorld"]
+end
+ROOT --> S01
+subgraph T01["T01 owned declarations"]
+E048["E048 createClock, AmbientClock"]
+E049["E049 loopSample, LoopSample"]
+E050["E050 evaluateTrack"]
+end
+ROOT --> T01
+subgraph D01["D01 owned declarations"]
+E051["E051 createRepository, WorldRepository"]
+E052["E052 createBrowserStorage"]
+E053["E053 createNativeStorage, NativeFiles"]
+end
+ROOT --> D01
+subgraph A01["A01 owned declarations"]
+E054["E054 encodePage, decodePage, encodeTrack, decodeTrack"]
+E055["E055 createManifest, canonicalJson, hashBytes"]
+E056["E056 validateArchive, ValidatedArchive"]
+E057["E057 exportWorld, importWorld"]
+end
+ROOT --> A01
+subgraph R01["R01 owned declarations"]
+E058["E058 createPageCache, PageCache"]
+E059["E059 selectVisible, PageSelection"]
+E060["E060 createWebGpuRenderer, RenderDeps"]
+E061["E061 createWebGlRenderer"]
+E062["E062 orbit, pan, zoom, flight"]
+E063["E063 createXrSession, XrSession, XrView, XrInput"]
+E064["E064 decodeMesh, MeshAsset"]
+E065["E065 FrameUniforms, PageBindings"]
+E066["E066 SortUniforms, SortBuffers"]
+E067["E067 main, aCorner"]
+end
+ROOT --> R01
+subgraph J01["J01 owned declarations"]
+E068["E068 WorkerRequest, WorkerServiceRequest, WorkerServiceReply, WorkerReply"]
+E069["E069 createScheduler, JobDeps"]
+E070["E070 runWorker"]
+end
+ROOT --> J01
+subgraph W01["W01 owned declarations"]
+E071["E071 reduce, initialState"]
+E072["E072 validateCommand, applyWorldCommand"]
+E073["E073 createController, Controller, ControllerDeps"]
+end
+ROOT --> W01
+subgraph P01["P01 owned declarations"]
+E074["E074 createCruiseWorld, createCruisePages"]
+E075["E075 createGeometryFixtures, FixtureSet"]
+end
+ROOT --> P01
+subgraph U01["U01 owned declarations"]
+E076["E076 bindStudio, StudioBinding, STUDIO_BINDINGS"]
+E077["E077 MESSAGES, formatTelemetry"]
+E078["E078 THEME"]
+end
+ROOT --> U01
+subgraph H01["H01 owned declarations"]
+E079["E079 probeCapabilities, chooseBackend"]
+E080["E080 createBrowserPlatform"]
+E081["E081 createTauriPlatform"]
+E082["E082 run, desktop, build, run"]
+end
+ROOT --> H01
+subgraph B01["B01 owned declarations"]
+E083["E083 bootstrap, mountApplication, bootstrapWorker"]
+E084["E084 runCli, CliIO"]
+E085["E085 buildTarget, readVersion, BuildIdentity"]
+E086["E086 verifyTask, TaskReceipt"]
+E087["E087 CACHE_NAME"]
+end
+ROOT --> B01
+G01 -. uses .-> C01
+I01 -. uses .-> C01 & G01
+S01 -. uses .-> C01 & G01
+T01 -. uses .-> C01
+D01 -. uses .-> C01
+A01 -. uses .-> C01
+R01 -. uses .-> C01 & G01 & T01
+J01 -. uses .-> C01 & I01 & S01 & A01
+W01 -. uses .-> C01
+P01 -. uses .-> C01 & S01
+U01 -. uses .-> C01 & W01
+H01 -. uses .-> C01 & D01
+B01 -. uses .-> C01 & G01 & I01 & S01 & T01 & D01 & A01 & R01 & J01 & W01 & P01 & U01 & H01

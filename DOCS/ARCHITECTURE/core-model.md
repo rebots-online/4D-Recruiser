@@ -1,3 +1,5 @@
+> **ARCHIVE — superseded by [ARCHITECTURE.md v2](../ARCHITECTURE.md).** This Kotlin/Room v1 donor is preserved for provenance and is not an active coding contract. Do not execute its task IDs or use its signatures for the Tauri 2 product. The operator has requested a hold after architecture.
+
 # ARCH:core-model — `:core-model` entity table
 
 Package `mba.robin.recruiser4d.core.model`. Pure Kotlin (`java-library`-style Android library, no Android imports except where noted). Constants object below is the single home of every literal in this module.

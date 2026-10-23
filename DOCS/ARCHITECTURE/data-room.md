@@ -1,3 +1,5 @@
+> **ARCHIVE — superseded by [ARCHITECTURE.md v2](../ARCHITECTURE.md).** This Kotlin/Room v1 donor is preserved for provenance and is not an active coding contract. Do not execute its task IDs or use its signatures for the Tauri 2 product. The operator has requested a hold after architecture.
+
 # ARCH:data-room — `:data-room` entity table
 
 Package `mba.robin.recruiser4d.data.room`. Room 2.6.1, schema version 1, `exportSchema = true` (schemas dir `data-room/schemas`).

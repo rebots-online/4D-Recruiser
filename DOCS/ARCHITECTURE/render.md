@@ -1,3 +1,5 @@
+> **ARCHIVE — superseded by [ARCHITECTURE.md v2](../ARCHITECTURE.md).** This Kotlin/Room v1 donor is preserved for provenance and is not an active coding contract. Do not execute its task IDs or use its signatures for the Tauri 2 product. The operator has requested a hold after architecture.
+
 # ARCH:render — `:core-render` entity table
 
 Package `mba.robin.recruiser4d.render`. OpenGL ES 3.0 (`#version 300 es`), instanced quads, CPU depth sort. Android library **without Compose**; only `android.opengl.*`, `java.nio.*`, `android.opengl.GLSurfaceView` interop types.

@@ -1,3 +1,5 @@
+> **ARCHIVE — superseded by [ARCHITECTURE.md v2](../ARCHITECTURE.md).** This Kotlin/Room v1 donor is preserved for provenance and is not an active coding contract. Do not execute its task IDs or use its signatures for the Tauri 2 product. The operator has requested a hold after architecture.
+
 # ARCH:stitch-temporal — `:feature-stitch` + `:feature-temporal` entity tables
 
 ## §S `:feature-stitch` — package `mba.robin.recruiser4d.stitch`

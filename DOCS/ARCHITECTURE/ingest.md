@@ -1,3 +1,5 @@
+> **ARCHIVE — superseded by [ARCHITECTURE.md v2](../ARCHITECTURE.md).** This Kotlin/Room v1 donor is preserved for provenance and is not an active coding contract. Do not execute its task IDs or use its signatures for the Tauri 2 product. The operator has requested a hold after architecture.
+
 # ARCH:ingest — `:feature-ingest` entity table
 
 Package `mba.robin.recruiser4d.ingest`. All math is closed-form and deterministic (no RNG, no ML model files); identical input bytes → identical splat output, which is what makes ingest tests swarm-safe.

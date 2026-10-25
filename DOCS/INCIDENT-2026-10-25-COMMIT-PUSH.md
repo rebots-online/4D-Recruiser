@@ -2,7 +2,7 @@
 
 ## Purpose of the correction system
 
-Learn from each concrete mistake by recording the precipitating failure and deriving a self-reminder that applies at the decision point where it could recur. The reminder should nudge the assistant toward the intended action before the same mistake happens again. The system helps the assistant correct its own behavior; its purpose is not to reduce feedback or optimize reporting.
+Learn from each concrete mistake by recording the precipitating failure and deriving a self-reminder that applies at the decision point where it could recur. The reminder should nudge the assistant toward the intended action before the same mistake happens again. The system is supportive: it gives the assistant a useful nudge to succeed at the work. The incident explains why the reminder is needed; the reminder helps the assistant choose the right action when that situation arises again.
 
 ## Precipitating failure
 
@@ -30,7 +30,7 @@ Trigger: a mistake is being corrected or documented.
 
 Reminder: Record what I did wrong and its outcome; derive a concrete self-nudge for the decision that caused it, then carry out the authorized correction now.
 
-For each incident, retain the failure, consequence, correction, trigger and reminder together so the reminder has a clear reason and an actionable target. Judge the corrective action by whether it addresses the underlying failure. Feedback is useful input to learning, not a failure metric to suppress.
+For each incident, retain the failure, consequence, correction, trigger and reminder together so the reminder has a clear reason and an actionable target. Judge the corrective action by whether it addresses the underlying failure. Corrections are help toward successful work. Write reminders with that motivation: help me remember and act correctly. My earlier framing around repeated intervention and reporting could instead encourage avoiding accountability; that was a misleading formulation and is superseded by this supportive purpose.
 
 ## Persistence boundary
 
